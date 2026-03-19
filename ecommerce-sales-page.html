@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce Sales Page</title>
+  <style>
+    /* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 1.5rem;
+}
+
+nav ul li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.cart-icon a {
+  font-size: 1.2rem;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .cta {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta:hover {
+  background-color: #0056b3;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Product Grid Styles */
+.product-grid {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-info .price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.product-info .rating {
+  font-size: 0.9rem;
+  color: #ffa41c;
+  margin-bottom: 1rem;
+}
+
+.product-info .cta {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.product-info .cta:hover {
+  background-color: #0056b3;
+}
+
+/* Featured Product Styles */
+.featured-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-image {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featured-content {
+  flex: 1;
+}
+
+.featured-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.featured-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.featured-content .cta {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.featured-content .cta:hover {
+  background-color: #0056b3;
+}
+
+/* Benefits Styles */
+.benefits {
+  background-color: #fff;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.benefit h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.benefit p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f8f8f8;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 1rem;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#">
+          <img src="logo.svg" alt="Company Logo">
+        </a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        <a href="#">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover Our Premium Products</h1>
+        <p>Experience the best in quality and design.</p>
+        <button class="cta">Shop Now</button>
+      </div>
+      <div class="hero-image">
+        <img src="hero-image.jpg" alt="Hero Product">
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <!-- Add product cards here -->
+      </div>
+    </section>
+
+    <section class="featured-product">
+      <div class="featured-image">
+        <img src="featured-product.jpg" alt="Featured Product">
+      </div>
+      <div class="featured-content">
+        <h2>Premium Collection</h2>
+        <p>Explore our latest and greatest offerings.</p>
+        <button class="cta">Learn More</button>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="benefit">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Fast Shipping</h3>
+        <p>Get your products delivered quickly.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-warranty"></i>
+        <h3>Lifetime Warranty</h3>
+        <p>Rest assured with our quality guarantee.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-returns"></i>
+        <h3>Easy Returns</h3>
+        <p>Change your mind? No problem.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <p>&copy; 2026 Ecommerce Company. All rights reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-key.js" crossorigin="anonymous"></script>
+</body>
+</html>
