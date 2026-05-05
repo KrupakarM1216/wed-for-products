@@ -1,43 +1,98 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Wed for Products - Product Catalog</title>
-  <style>
-    body{font-family:system-ui,sans-serif;color:#222;background:#fafafa;margin:0;padding:2rem;}
-    header{max-width:900px;margin:0 auto 2rem;}
-    h1{margin:0;font-size:2rem;}
-    p{color:#555;}
-    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;max-width:900px;margin:0 auto;}
-    .card{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:1rem;}
-    .card h3{margin:0 0 .5rem;font-size:1.125rem;}
-    .card p{margin:0;color:#666;font-size:.9rem;}
-    footer{max-width:900px;margin:2rem auto 0;color:#999;font-size:.85rem;}
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Wed for Products</h1>
-    <p>A lightweight product catalog starter page. Add your products in index.html and link to your repo below.</p>
-  </header>
-  <main class="card-grid">
-    <div class="card">
-      <h3>Product One</h3>
-      <p>Short description of product one. Price, specs, or call-to-action can go here.</p>
-    </div>
-    <div class="card">
-      <h3>Product Two</h3>
-      <p>Short description of product two. Replace with real content or connect to an API later.</p>
-    </div>
-    <div class="card">
-      <h3>Product Three</h3>
-      <p>Short description of product three. Use this as a template for more items.</p>
-    </div>
-  </main>
-  <footer>
-    Built with love - Project repository:
-    <a href="https://github.com/KrupakarM1216/wed-for-products" style="color:#0070f3;text-decoration:none">GitHub</a>
-  </footer>
-</body>
-</html>
+  <html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Premium Web Product Catalog</title>
+      <link rel="stylesheet" href="styles/styles.css">
+      <link rel="icon" href="/favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <script defer src="js/script.js"></script>
+      <meta name="theme-color" content="#0070f3">
+  </head>
+  <body>
+      <!-- Navbar -->
+      <header class="navbar">
+          <nav class="container">
+              <img src="/images/logo.svg" alt="Brand" class="logo">
+              <ul class="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><button class="cta-btn">Explore Now</button></li>
+              </ul>
+              <button class="menu-btn hidden"><i class="fas fa-bars"></i></button>
+          </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <main class="container">
+          <section class="hero">
+              <div class="hero-content">
+                  <h1>Discover Premium Products</h1>
+                  <p>Find our carefully curated selection of high-quality products designed for durability and performance</p>
+                  <button class="primary-cta">Shop Now</button>
+              </div>
+              <div class="hero-image">
+                  <img src="/images/hero-img.jpg" alt="Premium Product Hero" loading="lazy">
+              </div>
+          </section>
+
+          <!-- Product Grid -->
+          <section class="products">
+              <h2 class="section-title">Featured Products</h2>
+              <div class="filters">
+                  <div class="filter-item active">All</div>
+                  <div class="filter-item">Electronics</div>
+                  <div class="filter-item">Home Appliances</div>
+                  <div class="filter-item">Furniture</div>
+              </div>
+              <div class="product-grid">
+                  <div class="product-card">
+                      <div class="product-image">
+                          <img src="/images/product1.jpg" alt="Product One" loading="lazy">
+                      </div>
+                      <div class="product-details">
+                          <h3>Product One</h3>
+                          <div class="price">₹9,999</div>
+                          <p>Premium quality product with advanced features for maximum satisfaction</p>
+                          <button class="add-to-cart">Add to Cart</button>
+                      </div>
+                  </div>
+                  <!-- Add more product cards -->
+              </div>
+          </section>
+
+          <!-- Features Section -->
+          <section class="features">
+              <h2 class="section-title">Key Features</h2>
+              <div class="feature-grid">
+                  <div class="feature-card">
+                      <i class="fas fa-shield"></i>
+                      <h4>24/7 Support</h4>
+                      <p>Our dedicated team is available around the clock to assist you</p>
+                  </div>
+                  <!-- Add more feature cards -->
+              </div>
+          </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+          <div class="container">
+              <div class="footer-content">
+                  <p>&copy; 2026 Premium Product Catalog. All rights reserved.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+              <div class="return-to-top">
+                  <a href="#"><i class="fad fa-chevron-up"></i></a>
+              </div>
+          </div>
+      </footer>
+  </body>
+  </html>
